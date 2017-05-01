@@ -1,3 +1,4 @@
+// background images
 $(function() {
   var backgroundImage = [
     "https://static.pexels.com/photos/235621/pexels-photo-235621.jpeg",
@@ -8,46 +9,50 @@ $(function() {
     "https://images.pexels.com/photos/50594/sea-bay-waterfront-beach-50594.jpeg?w=940&h=650&auto=compress&cs=tinysrgb",
     "https://static.pexels.com/photos/139575/pexels-photo-139575.jpeg"
   ];
-
+  // you can change the image here
   $("body").css("background-image", "url(" + backgroundImage[6] + ")");
 });
 
-$('body').scrollspy({target: ".navbar", offset: 80});
-$("#navbar a").on('click', function(event) {
+// scroll spy
+$("body").scrollspy({ target: ".navbar", offset: 80 });
+$("#navbar a").on("click", function(event) {
   if (this.hash !== "") {
     event.preventDefault();
     var hash = this.hash;
-    $('html, body').animate({
-      scrollTop: $(hash).offset().top
-    }, 800, function(){
-      window.location.hash = hash;
-    });
-
+    $("html, body").animate(
+      {
+        scrollTop: $(hash).offset().top
+      },
+      800,
+      function() {
+        window.location.hash = hash;
+      }
+    );
   } // End if
-
 });
 
-$(document).ready(function(){
+// slow scroll
+$(document).ready(function() {
   // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
-
+  $("a").on("click", function(event) {
     // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
       // Prevent default anchor click behavior
       event.preventDefault();
-
       // Store hash
       var hash = this.hash;
-
       // Using jQuery's animate() method to add smooth page scroll
       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
+      $("html, body").animate(
+        {
+          scrollTop: $(hash).offset().top
+        },
+        800,
+        function() {
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        }
+      );
     } // End if
   });
 });
