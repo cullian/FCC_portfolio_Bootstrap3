@@ -27,24 +27,16 @@ p {
   text-align: center;
 }
 
-/* sets navbar color */
-
 .navbar-default {
   background-color: #0b8c27;
   border-color: #0b8c27;
 }
-
-
-/*Sets the text hover color on navbar*/
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus,
 .navbar-default .navbar-header > a:hover {
   color: #000;
 }
-
-
-/*Change navbar text color*/
 
 .navbar-default .navbar-nav > li > a,
 .navbar-default .navbar-header > a {
@@ -59,17 +51,17 @@ p {
   border-style: solid;
 }
 
-.contact-section {
-  text-align: center;
-  color: white;
-}
-
 .caption > p {
   color: black;
 }
 
-.thumbnail{
+.thumbnail {
   display: block;
+}
+
+.contact-section {
+  text-align: center;
+  color: white;
 }
 
 footer {
